@@ -10,7 +10,7 @@ services:
     networks:
       - decide
     environment:
-      - POSTGRES_PASSWORD=
+      - POSTGRES_PASSWORD=postgres
   web:
     restart: always
     container_name: decide_web
@@ -35,7 +35,7 @@ services:
     volumes:
       - static:/app/static
     ports:
-      - "8000:80"
+      - "8001:80"
     depends_on:
       - web
     networks:
